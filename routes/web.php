@@ -25,6 +25,10 @@ Route::resource('categories', 'CategoryController', ['except' => 'create']);
 
 Route::resource('tags', 'TagController');
 
+//Comments
+
+Route::resource('comments', 'CommentsController');
+
 Route::get('blog', ['uses' => 'BlogController@getIndex', 'as' => 'blog.index']);
 
 Route::get('blog/{slug}', ['uses' => 'BlogController@getSingle', 'as' => 'blog.single']);
